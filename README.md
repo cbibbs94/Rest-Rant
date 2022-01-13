@@ -1,8 +1,8 @@
-#Project Rest-Rant
+# Project Rest-Rant
 
 Rest- Rant will be an app where users will be able to review and rave about their favorite restaurants from all over!!
 
-##Project routes
+## Project routes
 
 | Method  | Path | Purpose |
 | ------------ | ------------- | ------------ |
@@ -17,7 +17,7 @@ Rest- Rant will be an app where users will be able to review and rave about thei
 | GET | * | 404 page(Matches any route not defined above)|
 
 
-###How places are defined
+### How places are defined
 name(string)
 city(string)
 state(string)
