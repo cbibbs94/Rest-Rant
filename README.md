@@ -18,8 +18,9 @@ Rest- Rant will be an app where users will be able to review and rave about thei
 
 
 ### How places are defined
-name(string)
-city(string)
-state(string)
-cuisines(string)
-and a picture (url string) 
+|---|---|
+|Name|(string)|
+|City|(string)|
+|State|(string)|
+|cuisine|(string)|
+|Pic|(string)|
