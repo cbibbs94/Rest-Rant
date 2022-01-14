@@ -18,6 +18,7 @@ Rest- Rant will be an app where users will be able to review and rave about thei
 
 
 ### How places are defined
+|Field|Type|
 |---|---|
 |Name|(string)|
 |City|(string)|
