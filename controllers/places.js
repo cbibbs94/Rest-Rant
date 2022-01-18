@@ -7,13 +7,13 @@ router.get('/', (req, res) => {
         city:'Seattle',
         state:'WA',
         cuisine:'Thai, Pan-Asian',
-        pic: 'https://images.huffingtonpost.com/2016-04-04-1459778795-3582863-padthai921884_960_720.jpg'
+        pic: '/images/padthai.jpg'
     }, {
         name:'Coding Cat Cafe',
         city:'Phoenix',
         state:'AZ',
         cuisine:'Coffee, Bakery',
-        pic: 'https://static.boredpanda.com/blog/wp-content/uploads/2015/03/I-create-adorable-cat-sweets9__605.jpg'
+        pic: '/images/catSweets.jpg'
     }]
     res.render('places/index',{places})
 })
