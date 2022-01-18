@@ -1,4 +1,20 @@
 h1 {
     text-align : center;
-    color: #1A68A6ff
+    color: ivory;
+}
+
+main{
+    background-color:#1A68A6ff ;
+    
+}
+
+body {
+    background-color: slategray;
+    -webkit-box-align: center;
+    
+}
+
+img {
+    width: 400px;
+    height: 400px;
 }
