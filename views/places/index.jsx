@@ -20,13 +20,18 @@ function index (data) {
     <Def>
         <main>
             <h1>Places Index Page</h1>
-            <div className='row'>
+         </main>   
+         <body>
+             <div className='row'>
             {placesFormatted}
             </div>
             <a href='/'>
                 <button className='btn-primary'>Home Page</button>
             </a>
-        </main>
+            <a href="/places/new">
+                <button className='btn-primary'>Add a New Spot</button>
+            </a>
+        </body>        
     </Def>
 )
 }

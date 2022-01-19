@@ -15,3 +15,18 @@ img {
     width: 400px;
     height: 400px;
 }
+
+html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex-shrink: 0;
+    background-color: #1A68A6ff;
+  }

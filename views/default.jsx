@@ -10,6 +10,10 @@ function Def (html) {
             </head>
             <body>
                 {html.children}
+                <div class="content">
+                     <h5>Contact us</h5>
+                </div>
+                <footer class="footer"></footer>
             </body>
         </html>
     )
