@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const places = require('../models/places')
 
 //GET New Form
 router.get('/new',(req, res) => {
@@ -7,25 +8,23 @@ router.get('/new',(req, res) => {
 
 //Post Route
 router.post('/',(req,res) => {
-    console.log(req.body)
-    res.send('POST /places');
+    if ( !req.body.pic) {
+        //default image if one isn't provided
+        req.body.pic = '\\images\\storeDefault.jpg'
+    }
+    if (!req.body.city) {
+        req.body.city = 'Anywhere'
+    }
+    if (!req.body.state) {
+        req.body.state = 'USA'
+    }
+    places.push(req.body)
+    res.redirect('/places');
 })
 
 //GET Places
 router.get('/', (req, res) => {
-    let places = [{
-        name:'H-Thai-ML',
-        city:'Seattle',
-        state:'WA',
-        cuisine:'Thai, Pan-Asian',
-        pic: '/images/padthai.jpg'
-    }, {
-        name:'Coding Cat Cafe',
-        city:'Phoenix',
-        state:'AZ',
-        cuisine:'Coffee, Bakery',
-        pic: '/images/catSweets.jpg'
-    }]
+       
     res.render('places/index',{places})
 })
 

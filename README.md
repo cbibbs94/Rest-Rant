@@ -25,3 +25,7 @@ Rest- Rant will be an app where users will be able to review and rave about thei
 |State|(string)|
 |cuisine|(string)|
 |Pic|(string)|
+
+
+Store Default Credit: Photo by <a href="https://unsplash.com/@mikepetrucci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mike Petrucci</a> on <a href="https://unsplash.com/s/photos/free-empty-store-front?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
