@@ -1,5 +1,16 @@
 const router = require('express').Router()
 
+//GET New Form
+router.get('/new',(req, res) => {
+    res.render('places/new')
+})
+
+//Post Route
+router.post('/',(req,res) => {
+    console.log(req.body)
+    res.send('POST /places');
+})
+
 //GET Places
 router.get('/', (req, res) => {
     let places = [{
