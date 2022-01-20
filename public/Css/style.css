@@ -1,14 +1,43 @@
+nav {
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 25px;
+}
+
+nav a {
+  color: ivory;
+  font-size: 1.5em;
+}
+
+nav a:hover {
+  color: pink;
+  text-decoration: none;
+}
+
 h1 {
     text-align : center;
     color: ivory;
 }
 
 main{
-    background-color:#1A68A6ff ;    
+    background-color:#1A68A6ff;
+    margin-right: 20px;
+    margin-left: 20px;
+
 }
 
 body {
     background-color: slategray;
+    text-align: center;
 }
 
 img {
@@ -30,3 +59,4 @@ html, body {
     flex-shrink: 0;
     background-color: #1A68A6ff;
   }
+
