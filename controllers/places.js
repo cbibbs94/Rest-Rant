@@ -22,7 +22,7 @@ router.get('/:id/edit', (req, res) => {
         res.render('error404')
     }
     else {
-        res.render('places/edit' , {places: places[id]})
+        res.render('places/edit' , {places: places[id], id})
     }
 })
 
@@ -80,7 +80,7 @@ router.put('/:id', (req, res) => {
         }
         //save the new data into places[id]
         places[id] = req.body
-        res.redirect(`/places/${id}`)
+        res.redirect(`/places/${id}`,)
     }
 })
 
