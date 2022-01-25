@@ -18,7 +18,7 @@ function edit_form (data) {
                         <input className='form-control' type="url" id="pic" name="pic" value={data.places.pic}/>
                     </div>
                     <div className='row'>
-                        <div className='form-group col-sm-6'>
+                        <div className='form-group col-sm-6 col'>
                             {/* city */}
                             <label htmlFor="city">City Name</label>
                             <input className='form-control' id='city' name='city' value={data.places.city}/>
