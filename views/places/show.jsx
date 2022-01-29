@@ -6,16 +6,21 @@ function show (data) {
         <Def>
             <main>
                 <h1>{data.place.name}</h1>
-                <p>
-                    <img src={data.place.pic} alt={data.place.name} />
-                </p>
                 <div>
-                   <h3>What Would you rate this Spot?</h3>
+                    <img src={data.place.pic} alt={data.place.name} />
+                </div>
+                <div>
+                   <h2>What Would you rate this Spot?</h2>
                         <p>No Ratings Yet</p> 
                 </div>
                 <div>
-                    <h3>Description</h3>
-                        <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisine}</p>
+                    <h2>Description</h2>
+                    <h3>
+                        {data.place.showEstablished()}
+                    </h3> 
+                    <h4>
+                        serving {data.place.cuisine}
+                    </h4>
                 </div>
                 <div>
                     <a href={`./${data.id}/edit`} className="btn btn-warning">
