@@ -1,18 +1,19 @@
 const router = require('express').Router()
 const db = require('../models')
 
-
+//home page
 router.get('/', (req, res) => {
     db.Place.find()
     .then((places) =>{
         res.render('places/index', {places})
     })
     .catch(err => {
-        console.log(err)
+        console.log('err', err)
         res.render('error404')
     })
 })
 
+//New Place Form and POST route
 router.post('/', (req, res) => {
     db.Place.create(req.body)
     .then(() => {
@@ -36,9 +37,12 @@ router.get('/new', (req, res) => {
     res.render('places/new')
 })
 
+//Show page for places
 router.get('/:id', (req, res) => {
     db.Place.findById(req.params.id)
+    .populate('comments')
     .then(place => {
+        console.log(place.comments)
         res.render('places/show', {place})
     })
     .catch(err => {
