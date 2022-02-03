@@ -11,7 +11,13 @@ const placeSchema = new mongoose.Schema({
         min: [1673, "Damn older than that?!"],
         max: [new Date().getFullYear(), "It seems like your trying to get a future date Time Travler"]
     },
-    comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
+    //comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
+})
+
+placeSchema.virtual('comments', {
+    ref: "Comment",
+    localField: '_id',
+    foreignField: 'place'
 })
 
 placeSchema.methods.showEstablished = function() {
