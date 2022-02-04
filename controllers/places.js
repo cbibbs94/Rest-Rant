@@ -4,7 +4,7 @@ const db = require('../models')
 //home page
 router.get('/', (req, res) => {
     db.Place.find()
-    .then((places) =>{
+    .then((places) => {
         res.render('places/index', {places})
     })
     .catch(err => {
@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
     db.Place.findById(req.params.id)
     .populate('comments')
     .then(place => {
-        //console.log(place.comments)
+        console.log(place.comments)
         res.render('places/show', {place})
     })
     .catch(err => {
