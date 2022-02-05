@@ -54,6 +54,35 @@ function show (data) {
                         </button>
                     </form>
                 </div>
+                <hr/>
+                <h2>Got anything you wanna say about this Place?</h2>
+                <form action={`/places/${data.place.id}/comment`} method='POST'>
+                    <div className="row">
+                        {/* Content of the Comment */}
+                        <div className="form-group col-sm-12">
+                            <label htmlFor="content">Content</label>
+                            <textarea name="content" id="content" className="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {/* Author */}
+                        <div className="form-group col-sm-4">
+                            <label htmlFor="author">Author</label>
+                            <input id="author" name="author" className="form-control" />
+                        </div>
+                        {/* Star Rating */}
+                        <div className="form-group col-sm-4">
+                            <label htmlFor="stars">Star Rating</label>
+                            <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" className="form-control" />
+                        </div>
+                        {/* Rant CheckBox */}
+                        <div className="form-group col-sm-2">
+                            <label htmlFor="rant">Are you Ranting?</label>
+                            <input type="checkbox" id="rant" name="rant" className="form-control" />
+                        </div>
+                    </div>
+                    <input type="submit" className="btn btn-primary" value="Add Comment" />
+                </form>
             </main>
         </Def>
     )
