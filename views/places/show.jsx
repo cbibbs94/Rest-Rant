@@ -2,13 +2,31 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
-    console.log(data)
+    //console.log(data)
     let comments= (
         <h3 className="inactive">
             no comments yet
         </h3>
     )
+    let rating = (
+        <h3 className="inactive">
+            Not yet Rated
+        </h3>
+    )
     if (data.place.comments.length) {
+        let sumRatings = data.place.comments.reduce((tot, c) => {
+            return tot + c.stars
+        }, 0)
+        let averageRating = sumRatings / data.place.comments.length
+        let stars = ''
+        for (let i = 0; i < averageRating; i++) {
+            stars += '🌟'
+        }
+        rating= (
+            <h3>
+                {stars} stars
+            </h3>
+        )
         comments = data.place.comments.map(c => {
             return (
                 <div className="border">
@@ -18,6 +36,9 @@ function show (data) {
                         <strong>- {c.author}</strong>
                     </h3>
                     <h4>Rating: {c.stars}</h4>
+                    <form method="POST" action={`/places/${data.place.id}/comments/${c.id}?_method=DELETE`}>
+                        <input type="submit" className="btn btn-danger" value="Delete " />
+                    </form>
                 </div>
             )
         })
@@ -31,7 +52,7 @@ function show (data) {
                 </div>
                 <div className="row">
                    <h2>What Would you rate this Spot?</h2>
-                        <p>No Ratings Yet</p>
+                        {rating}
                     <h2>Comments</h2>
                         {comments}
                 </div>
