@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     })
 })
 
-//New Place Form and POST route
+//New Place Form POST route
 router.post('/', (req, res) => {
     db.Place.create(req.body)
     .then(() => {
@@ -54,7 +54,7 @@ router.get('/:id', (req, res) => {
 
 //Edit a Place
 router.get('/:id/edit', (req, res) => {
-    db.Place.FindById(req.params.id)
+    db.Place.findById(req.params.id)
     .then(place => {
         res.render('place/edit', {place})
     })
