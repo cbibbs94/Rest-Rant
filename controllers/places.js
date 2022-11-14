@@ -56,10 +56,11 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     db.Place.findById(req.params.id)
     .then(place => {
-        res.render('place/edit', {place})
+        res.render('places/edit', {place})
     })
     .catch(err => {
         res.render('error404')
+        console.log("This is what happened" + err)
     })
 })
 
